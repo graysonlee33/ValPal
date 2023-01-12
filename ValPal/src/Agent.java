@@ -23,9 +23,9 @@ public class Agent {
 
     public int addScore()
     {
-        score+=averageACS * 10;
-        score+=lastACS * 5;
-        score+=esportsPR * 100 * 1.5; //in percent
+        score += (averageACS/1000.0) * .3;
+        score += (lastACS/1000.0) * .4;
+        score += (esportsPR/100.0) * .3; //in percent
         //score+=playerPR * 1000;
         return score;
     }
