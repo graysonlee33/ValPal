@@ -8,7 +8,7 @@ public class Agent {
     //private double playerPR;
 
     private int type;
-    private int score;
+    private double score;
 
     public Agent(String agentName, int averageACS, int lastACS, double esportsPR, int type)
     {
@@ -21,7 +21,7 @@ public class Agent {
         score = addScore();
     }
 
-    public int addScore()
+    public double addScore()
     {
         score += (averageACS/1000.0) * .3;
         score += (lastACS/1000.0) * .4;
@@ -40,7 +40,7 @@ public class Agent {
         return type;
     }
 
-    public int getScore()
+    public double getScore()
     {
         return score;
     }
@@ -60,3 +60,4 @@ public class Agent {
         }
     }
 }
+
